@@ -64,8 +64,7 @@ public class DateAndTime_02_Test {
         LocalDate localDate = LocalDate.of(2015, Month.MARCH, 11);
 
         // TODO Formatter la date pour que le test soit passant
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd - MM - yyyy");
-        String result = localDate.format(formatter);
+        String result = localDate.format(DateTimeFormatter.ofPattern("dd - MM - yyyy"));
 
         assertThat(result, is("11 - 03 - 2015"));
     }
@@ -78,8 +77,7 @@ public class DateAndTime_02_Test {
         LocalDate localDate = LocalDate.of(2015, Month.MARCH, 11);
 
         // TODO Formatter la date pour avoir l'affichage suivant : "11/03/2015 00:00:00"
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm:ss");
-        localDate.format(formatter);
+        localDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm:ss"));
     }
 
     @Test
